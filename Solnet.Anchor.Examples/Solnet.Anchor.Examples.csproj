@@ -20,9 +20,9 @@
     <ProjectReference Include="..\Solnet.Anchor.SourceGenerator\Solnet.Anchor.SourceGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Solnet.Rpc" Version="6.0.3" />
-    <PackageReference Include="Solnet.Wallet" Version="6.0.3" />
-    <PackageReference Include="Solnet.Programs" Version="6.0.3" />
+    <PackageReference Include="Solnet.Rpc" Version="6.1.0" />
+    <PackageReference Include="Solnet.Wallet" Version="6.1.0" />
+    <PackageReference Include="Solnet.Programs" Version="6.1.0" />
   </ItemGroup>
   <Import Project="..\Solnet.Anchor.SourceGenerator\Solnet.Anchor.SourceGenerator.props" />
 </Project>
