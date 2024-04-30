@@ -216,8 +216,14 @@ namespace Solnet.Anchor
             }
 
 
-            var initExpr = InitializerExpression(SyntaxKind.CollectionInitializerExpression, ClientGeneratorDefaultValues.OpenBraceToken, SeparatedList<SyntaxNode>(initExprs), Token(SyntaxKind.CloseBraceToken));
-
+            //var initExpr = InitializerExpression(SyntaxKind.CollectionInitializerExpression, ClientGeneratorDefaultValues.OpenBraceToken, SeparatedList<SyntaxNode>(initExprs), Token(SyntaxKind.CloseBraceToken));
+            var initExpr = InitializerExpression(
+                SyntaxKind.CollectionInitializerExpression,
+                ClientGeneratorDefaultValues.OpenBraceToken,
+                SeparatedList<ExpressionSyntax>(initExprs), // Use ExpressionSyntax here
+                Token(SyntaxKind.CloseBraceToken)
+            );
+            
             body.Add(LocalDeclarationStatement(VariableDeclaration(
                 GenericName(Identifier("List"), TypeArgumentList(SeparatedList(new TypeSyntax[] { QualifiedName(QualifiedName(QualifiedName(IdentifierName("Solnet"), IdentifierName("Rpc")),
                         IdentifierName("Models")),
