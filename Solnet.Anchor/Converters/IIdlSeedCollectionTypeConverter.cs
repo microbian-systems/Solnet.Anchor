@@ -16,7 +16,7 @@ namespace Solnet.Anchor.Converters
         {
             if (reader.TokenType != JsonTokenType.StartArray) return null;
             var converter = (JsonConverter<IIdlSeed>)options.GetConverter(typeof(IIdlSeed));
-            List<IIdlSeed> seeds = new List<IIdlSeed>();
+            List<IIdlSeed> seeds = new();
 
             while (reader.Read() && reader.TokenType == JsonTokenType.StartObject)
             {

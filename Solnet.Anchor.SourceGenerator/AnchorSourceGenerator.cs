@@ -14,8 +14,8 @@ namespace Solnet.Anchor.SourgeGenerator
         public void Execute(GeneratorExecutionContext context)
         {
             // global logging from project file
-            List<string> addresses = new List<string>();
-            Dictionary<AdditionalText, string> files = new Dictionary<AdditionalText, string>();
+            List<string> addresses = new();
+            Dictionary<AdditionalText, string> files = new();
             bool success = false;
 
             try
@@ -59,7 +59,7 @@ namespace Solnet.Anchor.SourgeGenerator
             {
                 success = false;
                 string name = "";
-                StringBuilder code = new StringBuilder();
+                StringBuilder code = new();
 
                 try
                 {
@@ -98,7 +98,7 @@ namespace Solnet.Anchor.SourgeGenerator
             {
                 success = false;
                 string name = "";
-                StringBuilder code = new StringBuilder();
+                StringBuilder code = new();
 
                 try
                 {

@@ -16,7 +16,7 @@ namespace Solnet.Anchor.Converters
         {
             if (reader.TokenType != JsonTokenType.StartArray) return null;
 
-            List<IIdlAccountItem> accountItems = new List<IIdlAccountItem>();
+            List<IIdlAccountItem> accountItems = new();
 
             reader.Read();
             

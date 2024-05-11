@@ -2179,7 +2179,7 @@ namespace Solnet.Anchor
 
         private MemberDeclarationSyntax GenerateErrorsSyntaxTree(Idl idl)
         {
-            SyntaxNodeOrTokenList errors = new SyntaxNodeOrTokenList();
+            SyntaxNodeOrTokenList errors = new();
 
             for (int i = 0; i < idl.Errors?.Length; i++)
             {

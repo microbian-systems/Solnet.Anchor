@@ -12,7 +12,7 @@ namespace Solnet.Anchor.Converters
     public class IIdlTypeArrayConverter : JsonConverter<IIdlType[]>
     {
 
-        IIdlTypeConverter idlTypeConverter = new IIdlTypeConverter();
+        IIdlTypeConverter idlTypeConverter = new();
 
         public override IIdlType[] Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
